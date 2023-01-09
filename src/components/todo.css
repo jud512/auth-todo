@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 
-.item{
+.itemTodo{
     display: flex;
     gap: 5px;
 }

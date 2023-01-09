@@ -152,7 +152,7 @@ console.log(refChecked)
         <h1>TODO alkalmazás</h1>
         <input ref={refInputNewTask} type="text" className='inputNewTask' id='inputNewTask'  value={input} onChange={(e) => {setInput(e.target.value)}}/>
         <button className='newTask' onClick={addNewTask}>Új feladat</button>
-        <div className="item checkAll">
+        <div className="itemTodo checkAll">
             <input ref={refChecked} type="checkbox" name="checkedAll" id=""  onChange={handleChangeAll}/>
             <label htmlFor="checkedAll">Összes</label>
         </div>
@@ -162,7 +162,7 @@ console.log(refChecked)
             {
                 todos.map((item) => (
                   <div className='itemContainer'>
-                    <div className='item' key={item.id}>
+                    <div className='itemTodo' key={item.id}>
                         <input type="checkbox" id={item.id.toString()} name={item.text} value={item.id}  onChange={handleChange} checked={item.done}/>
                         <label>{item.text}</label>
                                             
