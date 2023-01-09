@@ -1,0 +1,57 @@
+.todo{
+    text-align: left;
+}
+
+.container {
+    width: 500px;
+    margin: 100px auto;
+    padding: 30px;
+    border: solid 2px purple;
+
+
+}
+
+.checkAll{
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.itemContainer{
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.item{
+    display: flex;
+    gap: 5px;
+}
+
+.tag{
+    border: 1px purple solid;
+    background-color: rgb(255, 221, 255);
+    padding: 3px;
+    border-radius: 10px;
+    font-size: smaller;
+}
+
+.inputNewTask{
+    width: 300px;
+    margin-right: 10px;
+}
+
+.newTask{
+    background-color: rgb(52, 9, 52);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-authtodo-dev-91151-authRole",
+      "UnauthRoleArn": "arn:aws:iam::849964836753:role/amplify-authtodo-dev-91151-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::849964836753:role/amplify-authtodo-dev-91151-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-authtodo-dev-91151-deployment",
+      "UnauthRoleName": "amplify-authtodo-dev-91151-unauthRole",
+      "StackName": "amplify-authtodo-dev-91151",
+      "StackId": "arn:aws:cloudformation:eu-central-1:849964836753:stack/amplify-authtodo-dev-91151/c6616de0-8d99-11ed-9dde-061c13a5f6bc",
+      "AmplifyAppId": "dgassuin9l55v"
+    },
+    "categories": {
+      "auth": {
+        "authtodo": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dgassuin9l55v",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}
