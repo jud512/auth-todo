@@ -5,10 +5,10 @@ type Place = 'otthon' | 'munka' | { custom: string }
 
 const Todo = () => {
     type Todo = Readonly<{
-    id: number
-    text: string
-    done: boolean
-    place?: Place
+      id: number
+      text: string
+      done: boolean
+      place?: Place
     }>
 
   //intersection type

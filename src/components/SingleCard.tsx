@@ -1,31 +1,31 @@
-import React from 'react'
-interface SingleCardProps{
+import React, { useEffect, useState } from 'react'
+export interface SingleCardProps{
     id: number;
     word: string;
     speech: string;
     pron: string;
+    desc: string
     select: boolean;
-    handleItemSelect: (id:number) => void;
+    type: string;
+    // handleItemSelect: (id:number) => void;
 }
 
 
-const SingleCard = ({id, word, speech, pron, select, handleItemSelect}:SingleCardProps) => {
+const SingleCard = ({id, word, speech, pron, desc, type}:SingleCardProps) => {
+  
+  
   return (
     <div>
-        <div className='item' key={id}>
-                    <p className='word'>{word}</p>
-                    <p className='speech'>{speech}</p>
-                    <p className='pron'>/{pron}/</p>
-                    <div className={`${select ? "overlayer hidden" : "overlayer"}`}
-                    onClick={() => handleItemSelect(id)} >
-                     
-                            <p>
-                            {id}
-                            
-                        </p>    
-                       
-                                            
-                    </div>
+        <div className='item' key={id}>                    
+
+                    { type ==='word' ? 
+                    <>
+                      <p className='word'>{ word }</p>
+                      <p className='speech'>{speech}</p>
+                      <p className='pron'>/{pron}/</p>
+                    </>
+                    : <p>{desc}</p>
+                    }
                 </div>
     </div>
   )

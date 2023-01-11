@@ -76,7 +76,6 @@ I18n.putVocabulariesForLanguage('hu', {
 Amplify.configure(awsExports);
 
 
-
 function App({ isPassedToWithAuthenticator, signOut, user }: Props) {
   if (!isPassedToWithAuthenticator) {
     throw new Error(`isPassedToWithAuthenticator was not provided`);
@@ -84,6 +83,7 @@ function App({ isPassedToWithAuthenticator, signOut, user }: Props) {
 
   const [openTodo, setOpenTodo] = useState(false);
   const [openLearnWithWords, setOpenLearnWithWords] = useState(false);
+  const [openLearnWithDesc, setOpenLearnWithDesc] = useState(false);
 
   const handleOpenTodo = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -92,6 +92,10 @@ function App({ isPassedToWithAuthenticator, signOut, user }: Props) {
   const handleOpenLearnWithWords = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setOpenLearnWithWords(!openLearnWithWords)
+  }
+  const handleOpenLearnWithDesc = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setOpenLearnWithDesc(!openLearnWithWords)
   }
 
   return (
@@ -104,13 +108,14 @@ function App({ isPassedToWithAuthenticator, signOut, user }: Props) {
         <h1>Válassz az alábbi alkalmazások közül</h1>
         <div className="apps">
           <button className='btn' onClick={handleOpenTodo}>TODO</button>
-          <button className='btn' onClick={handleOpenLearnWithWords}>Szótanulás - szavakkal</button>
-          <button className='btn'>Szótanulás - leírással</button>
+          <button className='btn' onClick={handleOpenLearnWithWords}>Learn words with English words</button>
+          <button className='btn' onClick={handleOpenLearnWithDesc}>Learn words with description</button>
         </div>
         
         
         {openTodo && <Todo />}
-        {openLearnWithWords && <LearnWithWords />}
+        {openLearnWithWords && <LearnWithWords type='word'/>}
+        {openLearnWithDesc && <LearnWithWords type='desc'/>}
         
       </div>
     </Authenticator>

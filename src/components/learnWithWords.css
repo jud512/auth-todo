@@ -1,4 +1,28 @@
 
+.formWordsNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+   
+}
+
+.formWordsNumber input{
+    text-align: center;
+    width: 100px;
+}
+
+.formBtn{
+    background-color: rgb(52, 9, 52);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+  
+
 
 .cards{
     width: 80vw;
@@ -8,6 +32,16 @@
     gap: 10px;
     flex-wrap: wrap;
 
+}
+
+.card{
+    position: relative;
+}
+
+.front{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .item{
